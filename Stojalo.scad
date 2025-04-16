@@ -1,0 +1,65 @@
+$fn=150;
+
+translate([0,0,84])union(){
+    difference(){
+        translate([-25/2,-25/2,0])cube([25,25,55]);
+        translate([-16/2,-16/2,-10])cube([16,16,50]);
+        translate([-30/2,0,10])rotate([0,90,0])cylinder(30,3.4,3.4);
+        translate([-30/2,0,30])rotate([0,90,0])cylinder(30,3.4,3.4);
+        translate([-5,-20,45])cube([10,40,20]);
+        translate([-30/2,0,55])rotate([0,90,0])cylinder(30,3.4,3.4);
+    }
+    difference(){
+        translate([-25/2,0,55])rotate([0,90,0])cylinder(25,12.5,12.5);
+        translate([-30/2,0,55])rotate([0,90,0])cylinder(30,3.4,3.4);
+        translate([-5,-20,45])cube([10,40,25]);
+    }
+}
+
+translate([0.5,0,150])union(){
+    difference(){
+        hull(){
+            translate([-10,0,5])cylinder(16,22.5,14);
+            translate([10,0,5])cylinder(16,22.5,14);
+        }
+        translate([16.5,0,0])cylinder(30,2,2);
+        translate([-16.5,0,0])cylinder(30,2,2);
+    }
+    rotate([90,0,0])translate([0,0,-65]){
+        hull(){
+            translate([-10/2,0,55])rotate([0,90,0])cylinder(10,7,7);
+            translate([-10/2,0,75])rotate([0,90,0])cylinder(10,7,7);
+        }
+        difference(){
+            hull(){
+                translate([-10/2,0,55])rotate([0,90,0])cylinder(10,18,18);
+                translate([-10/2,0,75])rotate([0,90,0])cylinder(10,18,18);
+            }
+            hull(){
+                translate([-15/2,0,55])rotate([0,90,0])cylinder(15,13,13);
+                translate([-15/2,0,75])rotate([0,90,0])cylinder(15,13,13);
+            }
+        }
+    }
+}
+
+union(){
+    difference(){
+        translate([-30/2,-30/2,0])cube([30,30,50]);
+        translate([-16/2,-16/2,-5])cube([16,16,60]);
+        translate([-60/2,0,20])rotate([0,90,0])cylinder(60,3.4,3.4);
+        translate([-60/2,0,40])rotate([0,90,0])cylinder(60,3.4,3.4);
+    }
+    difference(){
+        union(){
+            translate([-90/2,-30/2,0])cube([90,30,10]);
+            rotate([0,0,90])translate([-90/2,-30/2,0])cube([90,30,10]);
+           cylinder(10,30,30); 
+        }
+        translate([33,0,-5])cylinder(20,4.5,4.5);
+        translate([-33,0,-5])cylinder(20,4.5,4.5);
+        translate([0,33,-5])cylinder(20,4.5,4.5);
+        translate([0,-33,-5])cylinder(20,4.5,4.5);
+        translate([-16/2,-16/2,-5])cube([16,16,20]);
+    }
+}
